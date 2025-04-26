@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h2>Enter Patient Data</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="Pregnancies" placeholder="Pregnancies" required><br>
+        <input type="text" name="Glucose" placeholder="Glucose" required><br>
+        <input type="text" name="BloodPressure" placeholder="BloodPressure" required><br>
+        <input type="text" name="SkinThickness" placeholder="SkinThickness" required><br>
+        <input type="text" name="Insulin" placeholder="Insulin" required><br>
+        <input type="text" name="BMI" placeholder="BMI" required><br>
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="DPF" required><br>
+        <input type="text" name="Age" placeholder="Age" required><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
