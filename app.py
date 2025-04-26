@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import pickle
 import numpy as np
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Load the trained model
 with open("model.pkl", "rb") as f:
